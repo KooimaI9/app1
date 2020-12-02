@@ -15,16 +15,19 @@ final double settingLength2 = 50;
 final Color colors1 = Colors.black;
 
 //　線の色＿デフォルト
-MaterialColor colors2 = Colors.grey;
+Color colors2 = Colors.grey;
 
 //　箱の色＿デフォルト
-MaterialAccentColor colors3 = Colors.greenAccent;
+Color colors3 = Colors.white;
 
 //　横向きの配列
 List<Widget> verticalList = [];
 
 //　縦向きの配列
 List<Widget> horizontalList = [];
+
+// 全体の配列
+List<Widget> entireList = [];
 
 //Widget1
 
@@ -38,7 +41,7 @@ Widget settingPoint() {
 }
 
 //　縦線
-Widget settingVerticalLine() {
+Widget settingHorizontalLine() {
   return GestureDetector(
     onTap: () {},
     child: Container(
@@ -50,7 +53,7 @@ Widget settingVerticalLine() {
 }
 
 //　横線
-Widget settingHorizontalLine() {
+Widget settingVerticalLine() {
   return GestureDetector(
     onTap: () {},
     child: Container(
@@ -73,10 +76,15 @@ Widget settingBox() {
 //Widget2
 
 //横向きRow
-Widget settingHorizontalRow() {}
+Widget settingHorizontalRow() {
+  return Row(
+    children: horizontalList,
+  );
+}
 
 //縦向きRow
-Widget settingVerticalRow() {}
-
-//全体Column
-Widget settingEntireColumn() {}
+Widget settingVerticalRow() {
+  return Row(
+    children: verticalList,
+  );
+}

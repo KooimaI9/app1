@@ -2,30 +2,38 @@ import 'package:flutter/material.dart';
 
 import 'definition.dart';
 
-//縦向き配列初期化　&&　Rowに代入
+//横向き配列初期化　&&　Rowに代入
+
 void initializeVerticalList() {
-  for (var i = 0; i < 12; i++) {
+  for (var i = 0; i < 13; i++) {
     if (i % 2 == 0) {
-      verticalList.add(settingPoint());
+      horizontalList.add(settingPoint());
     } else {
-      verticalList.add(settingHorizontalLine());
+      horizontalList.add(settingHorizontalLine());
     }
-  }
-  ;
-  Widget settingVerticalRow() {
-    return Row(
-      children: verticalList,
-    );
   }
 }
 
-//横向き配列初期化
+//縦向き配列初期化　&&　Rowに代入
+
 void initializeHorizontalList() {
-  for (var i = 0; i < 12; i++) {
+  for (var i = 0; i < 13; i++) {
     if (i % 2 == 0) {
       verticalList.add(settingVerticalLine());
     } else {
       verticalList.add(settingBox());
+    }
+  }
+}
+
+//全体配列初期化
+
+void initializeEntireList() {
+  for (var i = 0; i < 13; i++) {
+    if (i % 2 == 0) {
+      entireList.add(settingHorizontalRow());
+    } else {
+      entireList.add(settingVerticalRow());
     }
   }
   ;
